@@ -93,9 +93,10 @@ eval "$DEPENDENCIES_CMD" | sed -u 's/^/       /'
 check_compile_status
 
 PRECOMPILE_CMD="$PLAY_PATH/play precompile $APP_DIR --silent 2>&1"
-echo "       Precompiling: $PRECOMPILE_CMD"
-eval "$PRECOMPILE_CMD" | sed -u 's/^/       /'
-check_compile_status
+echo "Skipping precompile"
+#echo "       Precompiling: $PRECOMPILE_CMD"
+#eval "$PRECOMPILE_CMD" | sed -u 's/^/       /'
+#check_compile_status
 
 # Repack Play! framework into cache
 mkdir -p $CACHE_DIR
